@@ -37,13 +37,13 @@ If you use inspector-gadget in your research, please cite the following paper:
 3) z3
 ```console
 $ git clone https://github.com/Z3Prover/z3
-$ python scripts/mk_make.py --python
-$ ./configure --python --prefix=$HOME/mylibs/
+$ git checkout ca0a52c9305f8816e063dce73d288244825de933 # might not be necessary, but I know this one works 
+$ python3 scripts/mk_make.py --prefix=$HOME/.local --python --pypkgdir=$HOME/.local/lib/python3.6/site-packages
 $ cd build
 $ make
 # sudo make install
 ```
-Note: you may have to update PYTHONPATH by adding /path/to/z3.git/build/
+Note: you may have to update PYTHONPATH by adding `export PYTHONPATH=$PYTHONPATH:$HOME/.local/bin` to your `.bashrc` or `.profile`.
 
 4) pefile
 ```console
